@@ -1,5 +1,4 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
 
 console.log(galleryItems);
 
@@ -19,21 +18,11 @@ function createGalleryMark (galleryItems) {
     }).join('');
 }
 
-const gallery = new SimpleLightbox('.gallery a', {captionsData: `alt`});
-
-function onClickEvent(e) {
+const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`});
+function onClickEvent(e){
     e.preventDefault();
     
-    if (e.target.nodeName !=='IMG') {
-        return;
-    }
-    const imageLink = e.target.dataset.source;
-    const imageAlt = e.target.dataset.alt;
-    const imageToShow = `<img src="${imageLink}", alt="${imageAlt}"/>`;
-
-    const lightbox = $('.gallery a').SimpleLightbox(imageToShow);
-    lightbox.next(); // Next Image
-}; 
-
+lightbox.next(); // Next Image
+}
 
 
