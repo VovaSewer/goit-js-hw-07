@@ -18,11 +18,11 @@ function createGalleryMark (galleryItems) {
     }).join('');
 }
 
-const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`});
+const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay:1250});
 function onClickEvent(e){
     e.preventDefault();
-    
-lightbox.next(); // Next Image
+
+    lightbox.next(); // Next Image
 }
 
 
