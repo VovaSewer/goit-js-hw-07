@@ -31,6 +31,7 @@ function onClickEvent(e){
     if (e.target.nodeName !=='IMG') {
         return;
     }
+    
     const imageLink = e.target.dataset.source;
     const imageAlt = e.target.dataset.alt;
     const imageToShow = `<img src="${imageLink}", alt="${imageAlt}"/>`;

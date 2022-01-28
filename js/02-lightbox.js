@@ -6,7 +6,7 @@ const galleryList = document.querySelector('.gallery');
 const galleryMark = createGalleryMark(galleryItems);
 
 galleryList.insertAdjacentHTML('beforeend', galleryMark);
-galleryList.addEventListener('click', onClickEvent);
+const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay:250});
 
 function createGalleryMark (galleryItems) {
     return galleryItems.map(({preview, original,  description}) => {
@@ -18,11 +18,6 @@ function createGalleryMark (galleryItems) {
     }).join('');
 }
 
-const lightbox = new SimpleLightbox('.gallery a', {captionsData: `alt`, captionDelay:250});
-function onClickEvent(e){
-    e.preventDefault();
 
-    lightbox.next(); // Next Image
-}
 
 
