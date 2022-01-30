@@ -36,7 +36,6 @@ function onClickEvent(e){
     const imageToShow = `<img src="${imageLink}", alt="${imageAlt}"/>`;
 
     // console.log(imageLink);
-    
     const instance = basicLightbox.create(imageToShow);
     instance.show()
 }
